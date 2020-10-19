@@ -3,7 +3,7 @@
         <head>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Login</title>
+            <title>Books</title>
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
@@ -11,71 +11,131 @@
 
     <body><!-- The rest of your code will go here -->
 
-        <section class="hero is-info is-fullheight"> <!-- The whole blue screen deal -->
-            <div class="hero-body">
+        <!-- Oops!, we are now logged. We should be having a navigation bar of some sort. -->
+        <nav class="navbar has-shadow">
 
-                <div class="container"> <!-- Suposedly to make sure content won't reach the edges of the screen -->
+            <!-- Navbar are composed of 2 parts; 'navbar-brand y navbar-menu' -->
+            <div class="navbar-brand">                                      <!-- The  navbar-brand  lives  on  the  left  side  of  the  navbar. -->
+                <img src="img/logo.jpg" alt="Logoxd" style='width:60px'>    <!-- It’s  always  visible  and  can  contain  any  number  of  navbar-item(s). -->
+                                                                            <!-- It  also  holds  the  Bulma  navbar-burger,  which  isused to toggle the navbar-menu -->
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
 
-                    <div class="columns is-centered">
+            </div>
 
-                        <div class="column is-5-tablet is-4-desktop is-3-widescreen">
+            <!-- Then the second part; navbar-menu -->
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <div class="navbar-item">
+                        <small>Publishing at the speed of technology</small>
+                    </div>
+                </div>
 
-                            <form class="box"> <!-- 'Hero'; just the background with the border radious -->
-                                <!-- Logo field -->
-                                <div class="field has-text-centered">
-                                    <img src="img/logo.jpg" alt="" style='width:70px;height: 40px;'>
-                                </div>
-                                <!-- Email field -->
-                                <div class="field">
-                                    <label for="mail" class="label">Email:</label>
-                                    <div class="control has-icons-left">
-                                        <!-- The 'control' class allows us to enhance the input element inside of it -->
-                                        <input required id="mail" type="email" class="input" placeholder="this@mail.me" autocomplete="nope">
+                <div class="navbar-end">
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <div class="navbar-link">User's Name</div>
+                        <div class="navbar-dropdown">
+                            <!-- Content to be dropped -->
+                            <div class="navbar-item">
+                                <div>
 
-                                        <span class="icon is-small is-left">
-                                            <i class="fa fa-envelope"></i>
-                                        </span>
-
-                                    </div>
-                                </div>
-                                <!-- Password field -->
-                                <div class="field">
-                                    <label for="pass" class="label">Password:</label>
-                                    <div class="control has-icons-left">
-
-                                        <input required type="password" id='pass' placeholder='******' class="input">
-
-                                        <span class="icon is-small is-left">
-                                            <i class="fa fa-lock"></i>
-                                        </span>
-
-                                    </div>
-                                </div>
-                                <!-- Remember me field -->
-                                <div class="field">
-
-                                    <label for="remember" class="checkbox">
-
-                                        <input id='remember' type="checkbox">
-                                        Remember me
-
-                                    </label>
+                                    <span class="icon is-small">
+                                        <i class="fa fa-user-circle-o"></i>
+                                    </span>
+                                    Profile
 
                                 </div>
-                                <!-- Submit btn -->
-                                <button class="button is-link is-outlined">
-                                    Login
-                                </button>
+                            </div>
+                            <!-- Another item; for bug reporting -->
+                            <div class="navbar-item">
 
-                            </form>
+                                <span class="icon is-small">
+                                    <i class="fa fa-bug"></i>
+                                </span>
+                                Report bug
+
+                            </div>
+                            <!-- This item for logging out -->
+                            <div class="navbar-item">
+
+                                <span class="icon is-small">
+                                    <i class="fa fa-sign-out"></i>
+                                </span>
+                                Sign Out
+
+                            </div>
 
                         </div>
-
                     </div>
-
                 </div>
 
             </div>
+
+        </nav>
+
+        <!-- We are done with the navbar; now we are going with the general SECTION -->
+        <section class="section">
+            <!-- Grid system -->
+            <div class="columns">
+                <!-- Side bar -->
+                <div class="column is-4-tablet is-3-desktop is-2-widescreen">
+
+                    <nav class="menu">
+
+                        <p class="menu-label">
+                            Menu
+                        </p>
+
+                        <!-- Menu list -->
+
+                        <ul class="menu-list">
+                            <li>
+                                <a href="dashboard.html">
+                                    <span class='icon'>
+                                        <i class='fa fa-tachometer'></i>
+                                    </span>
+                                    Dashboard
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class='is-active'  href="books.html">
+                                    <span class="icon">
+                                        <i class="fa fa-book"></i>
+                                    </span>
+                                    Books
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <span class="icon">
+                                        <i class="fa fa-address-book"></i>
+                                    </span>
+                                    Customers
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <span class="icon">
+                                        <i class="fa fa-file-text-o"></i>
+                                    </span>
+                                    Orders
+                                </a>
+                            </li>
+                        </ul>
+
+                    </nav>
+
+                </div>
+                <!-- Actual content; specific to each page -->
+                <div class="column"></div>
+            </div>
+
         </section>
 
     </body>
