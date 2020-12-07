@@ -3,7 +3,7 @@
         <head>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Books</title>
+            <title>Customers</title>
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
             <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css"> -->
@@ -103,7 +103,7 @@
                             </li>
 
                             <li>
-                                <a class='is-active'  href="books.html">
+                                <a class=''  href="index.html">
                                     <span class="icon">
                                         <i class="fa fa-book"></i>
                                     </span>
@@ -112,7 +112,7 @@
                             </li>
 
                             <li>
-                                <a href="#">
+                                <a class='is-active' href="#">
                                     <span class="icon">
                                         <i class="fa fa-address-book"></i>
                                     </span>
@@ -142,20 +142,20 @@
                         <div class="level-left">
                             <div class="level-item">
                                 <p class="subtitle is-5">
-                                    <strong>6</strong> Books
+                                    <strong>3</strong> Customers
                                 </p>
                             </div>
 
                             <div class="level-item">
 
-                                <a href='new-book.html' class="button is-success">New</a>
+                                <a href='new-customer.html' class="button is-success">New</a>
 
                             </div>
 
                             <div class="level-item is-hidden-tablet-only">
                                 <div class="field has-addons">
                                     <p class="control">
-                                        <input type="text" class='input' placeholder='Book name, or whatever...'>
+                                        <input type="text" autocomplete="nope" class='input' placeholder='Name, email or whatever...'>
                                     </p>
                                     <p class="control">
                                         <button class="button">Search</button>
@@ -167,235 +167,126 @@
 
                         <div class="level-right">
 
-                            <div class="level-item">
-                                Order by:
-                            </div>
-
-                            <div class="level-item">
-                                <div class="select">
-                                    <select name="" id="">
-                                        <option value="">Public date</option>
-                                        <option value="">Price</option>
-                                        <option value="">Page Count</option>
-                                    </select>
-                                </div>
-                            </div>
+                            <p class="level-item"><strong>All</strong></p>
+                            <p class="level-item">
+                                <a href="#">With orders</a>
+                            </p>
+                            <p class="level-item">
+                                <a href="#">Without orders</a>
+                            </p>
 
                         </div>
 
                     </nav>
 
-                    <div class="columns is-multiline">
-                        <div class="column is-12-tablet is-6-desktop is-4-widescreen">
+                    <table class="table is-fullwidth is-hoverable">
 
-                            <article class="box">
-                                <div class="media">
-                                    <aside class="media-left">
-                                        <img src="img/py.jpg" width='80' alt="Python Book">
-                                    </aside>
+                        <thead>
+                            <tr>
+                                <th class="is-narrow">
+                                    <input type="checkbox" name="" id="">
+                                </th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Country</th>
+                                <th>Order</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
 
-                                    <div class="media-content">
-                                        <p class="title is-5 is-spaced is-marginless">
-                                            <a href="edit-book.html">Python Crash Course</a>
-                                        </p>
+                        <tfoot>
+                            <tr>
+                                <th class="is-narrow">
+                                    <input type="checkbox" name="" id="">
+                                </th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Country</th>
+                                <th>Order</th>
+                                <th>Actions</th>
+                            </tr>
+                        </tfoot>
 
-                                        <p class="subtitle is-marginless">
-                                            $6.69
-                                        </p>
+                        <tbody>
 
-                                        <div class="content is-small">
-
-                                            270 pages.
-                                            <br>
-                                            A Hands-On, Project-Based Introduction to Programming
-                                            <br>
-                                            <a href="edit-book.html">Edit</a>
-                                            <span>.</span>
-                                            <a href="#">Delete</a>
-
-                                        </div>
-
+                            <tr>
+                                <td class="is-narrow">
+                                    <input type="checkbox" name="" id="">
+                                </td>
+                                <td>
+                                    <a href="edit-customer">
+                                        John Doe
+                                    </a>
+                                </td>
+                                <td>
+                                    <code>John.doe2@gmail.com</code>
+                                </td>
+                                <td>South Venezuela</td>
+                                <td>
+                                    <a href="customer.orders.html">3</a>
+                                </td>
+                                <!-- Actions -->
+                                <td>
+                                    <div class="buttons">
+                                        <a href="edit-customer.html" class="button is-small">Edit</a>
+                                        <a href="#" class="button is-small">Delete</a>
                                     </div>
+                                </td>
+                            </tr>
 
-                                </div>
-                            </article>
-
-                        </div>
-                        <div class="column is-12-tablet is-6-desktop is-4-widescreen">
-
-                            <article class="box">
-                                <div class="media">
-
-                                    <aside class="media-left">
-                                        <img src="img/js.jpg" alt="Javascript Book" width='80'>
-                                    </aside>
-
-                                    <div class="media-content">
-
-                                        <p class="title is-5 is-spaced is-marginless">
-                                            <a href="edit-book.html">
-                                                Eloquent Javascript
-                                            </a>
-                                        </p>
-
-                                        <p class="subtitle is-marginless">
-                                                $ 18,00
-                                        </p>
-
-                                        <div class="content is-small">
-                                            Completely revised and updated, this best-selling introduction
-                                            to programming in JavaScript focuses on writing real applications.
-                                            <br>
-                                            <a href="edit-book.html">Edit</a>
-                                            <span>.</span>
-                                            <a href="#">Delete</a>
-                                        </div>
-
+                            <tr>
+                                <td class="is-narrow">
+                                    <input type="checkbox" name="" id="">
+                                </td>
+                                <td>
+                                    <a href="edit-customer">
+                                        Jean Toe
+                                    </a>
+                                </td>
+                                <td>
+                                    <code>Jean.toe@Doemail.com</code>
+                                </td>
+                                <td>France</td>
+                                <td>
+                                    <a href="customer.orders.html">1</a>
+                                </td>
+                                <!-- Actions -->
+                                <td>
+                                    <div class="buttons">
+                                        <a href="edit-customer.html" class="button is-small">Edit</a>
+                                        <a href="#" class="button is-small">Delete</a>
                                     </div>
+                                </td>
+                            </tr>
 
-                                </div>
-                            </article>
-
-                        </div>
-                        <div class="column is-12-tablet is-6-desktop is-4-widescreen">
-                            <article class="box">
-                                <div class="media">
-                                    <aside class="media-left">
-                                        <img src="img/css.jpg" alt="Css" width='80' >
-                                    </aside>
-
-                                    <div class="media-content">
-
-                                        <div class="title is-5 is-marginless is-spaced">
-                                            <a href="see-book.html">
-                                                CSS, The Definitive Guide
-                                            </a>
-                                        </div>
-
-                                        <div class="subtitle is-marginless">
-                                            $ 48.88
-                                        </div>
-
-                                        <div class="content is-small">
-                                            If you’re a web designer or app developer interested in sophisticated page styling,
-                                            improved accessibility, and saving time and effort, this book is for you.
-                                            <br>
-
-                                            <a href="edit-book.html">Edit</a>
-                                            <span>.</span>
-                                            <a href="#">Delete</a>
-
-                                        </div>
-
+                            <tr>
+                                <td class="is-narrow">
+                                    <input type="checkbox" name="" id="">
+                                </td>
+                                <td>
+                                    <a href="edit-customer">
+                                        John Doe
+                                    </a>
+                                </td>
+                                <td>
+                                    <code>John.doe2@gmail.com</code>
+                                </td>
+                                <td>South Venezuela</td>
+                                <td>
+                                    <a href="customer.orders.html">3</a>
+                                </td>
+                                <!-- Actions -->
+                                <td>
+                                    <div class="buttons">
+                                        <a href="edit-customer.html" class="button is-small">Edit</a>
+                                        <a href="#" class="button is-small">Delete</a>
                                     </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="column is-12-tablet is-6-desktop is-4-widescreen">
-                            <article class="box">
-                                <div class="media">
-                                    <aside class="media-left">
-                                        <img src="img/bulma.jpg" alt="Css" width='80' >
-                                    </aside>
+                                </td>
+                            </tr>
 
-                                    <div class="media-content">
+                        </tbody>
 
-                                        <div class="title is-5 is-marginless is-spaced">
-                                            <a href="see-book.html">
-                                                Creating interfaces with Bulma
-                                            </a>
-                                        </div>
-
-                                        <div class="subtitle is-marginless">
-                                            $ 48.88
-                                        </div>
-
-                                        <div class="content is-small">
-                                            • Create layouts with Bulma <br>
-                                            • Work with components in Bulma <br>
-                                            • Design specific elements for your UI <br>
-                                            • Extend components with your own setup <br>
-                                            • Learn to integrati Bulma with JavaScript through the following frameworks: React, Angular, VueJS, and Vanilla JS.
-                                            <br>
-
-                                            <a href="edit-book.html">Edit</a>
-                                            <span>.</span>
-                                            <a href="#">Delete</a>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="column is-12-tablet is-6-desktop is-4-widescreen">
-                            <article class="box">
-                                <div class="media">
-                                    <aside class="media-left">
-                                        <img src="img/py.jpg" width='80' alt="Python Book">
-                                    </aside>
-
-                                    <div class="media-content">
-                                        <p class="title is-5 is-spaced is-marginless">
-                                            <a href="edit-book.html">Python Crash Course</a>
-                                        </p>
-
-                                        <p class="subtitle is-marginless">
-                                            $6.69
-                                        </p>
-
-                                        <div class="content is-small">
-
-                                            270 pages.
-                                            <br>
-                                            A Hands-On, Project-Based Introduction to Programming
-                                            <br>
-                                            <a href="edit-book.html">Edit</a>
-                                            <span>.</span>
-                                            <a href="#">Delete</a>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </article>
-                        </div>
-                        <div class="column is-12-tablet is-6-desktop is-4-widescreen">
-                            <article class="box">
-                                <div class="media">
-
-                                    <aside class="media-left">
-                                        <img src="img/js.jpg" alt="Javascript Book" width='80'>
-                                    </aside>
-
-                                    <div class="media-content">
-
-                                        <p class="title is-5 is-spaced is-marginless">
-                                            <a href="edit-book.html">
-                                                Eloquent Javascript
-                                            </a>
-                                        </p>
-
-                                        <p class="subtitle is-marginless">
-                                                $ 18,00
-                                        </p>
-
-                                        <div class="content is-small">
-                                            Completely revised and updated, this best-selling introduction
-                                            to programming in JavaScript focuses on writing real applications.
-                                            <br>
-                                            <a href="edit-book.html">Edit</a>
-                                            <span>.</span>
-                                            <a href="#">Delete</a>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </article>
-                        </div>
-                    </div>
+                    </table>
 
                     <nav class="pagination">
                         <a class="pagination-previous">Previous</a>

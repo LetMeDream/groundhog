@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Books</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+            <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/united/bulmaswatch.min.css">
+        </head>
+
+    <body><!-- The rest of your code will go here -->
+
+        <!-- Oops!, we are now logged. We should be having a navigation bar of some sort. -->
+        <nav class="navbar has-shadow">
+
+            <!-- Navbar are composed of 2 parts; 'navbar-brand y navbar-menu' -->
+            <div class="navbar-brand">                                      <!-- The  navbar-brand  lives  on  the  left  side  of  the  navbar. -->
+                <img src="img/logo.jpg" alt="Logoxd" style='width:60px'>    <!-- It’s  always  visible  and  can  contain  any  number  of  navbar-item(s). -->
+                                                                            <!-- It  also  holds  the  Bulma  navbar-burger,  which  isused to toggle the navbar-menu -->
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+
+            </div>
+
+            <!-- Then the second part; navbar-menu -->
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <div class="navbar-item">
+                        <small>Publishing at the speed of technology</small>
+                    </div>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <div class="navbar-link">User's Name</div>
+                        <div class="navbar-dropdown">
+                            <!-- Content to be dropped -->
+                            <div class="navbar-item">
+                                <div>
+
+                                    <span class="icon is-small">
+                                        <i class="fa fa-user-circle-o"></i>
+                                    </span>
+                                    Profile
+
+                                </div>
+                            </div>
+                            <!-- Another item; for bug reporting -->
+                            <div class="navbar-item">
+
+                                <span class="icon is-small">
+                                    <i class="fa fa-bug"></i>
+                                </span>
+                                Report bug
+
+                            </div>
+                            <!-- This item for logging out -->
+                            <div class="navbar-item">
+
+                                <span class="icon is-small">
+                                    <i class="fa fa-sign-out"></i>
+                                </span>
+                                Sign Out
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </nav>
+
+        <!-- We are done with the navbar; now we are going with the general SECTION -->
+        <section class="section">
+            <!-- Grid system -->
+            <div class="columns">
+                <!-- Side bar -->
+                <div class="column is-4-tablet is-3-desktop is-2-widescreen">
+
+                    <nav class="menu">
+
+                        <p class="menu-label">
+                            Menu
+                        </p>
+
+                        <!-- Menu list -->
+
+                        <ul class="menu-list">
+                            <li>
+                                <a href="dashboard.html">
+                                    <span class='icon'>
+                                        <i class='fa fa-tachometer'></i>
+                                    </span>
+                                    Dashboard
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class=''  href="books.html">
+                                    <span class="icon">
+                                        <i class="fa fa-book"></i>
+                                    </span>
+                                    Books
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class='is-active' href="#">
+                                    <span class="icon">
+                                        <i class="fa fa-address-book"></i>
+                                    </span>
+                                    Customers
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <span class="icon">
+                                        <i class="fa fa-file-text-o"></i>
+                                    </span>
+                                    Orders
+                                </a>
+                            </li>
+                        </ul>
+
+                    </nav>
+
+                </div>
+                <!-- Actual content; specific to each page -->
+                <div class="column">
+
+                    <nav class="breadcrumb">
+                        <ul>
+                            <li>
+                                <a href="index.html">Books</a>
+                            </li>
+                            <li class='is-active'>
+                                <a href="new-book.html">New Book</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <form>
+
+                        <div class="field">
+                            <label for="name" class="label">
+                                Name
+                            </label>
+                            <div class="control">
+                                <input id='name' required class='input is-medium' type="text" placeholder="e.g. Alex Jones">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="email" class="label">
+                                Email:
+                            </label>
+
+                            <div class="control has-icons-left">
+                                <span class="icon">
+                                    <i class="fa fa-envelope"></i>
+                                </span>
+
+                                <input required class='input' autocomplete='nope' type="email" name="" placeholder='JohnDoe@mail.me' id="email">
+                            </div>
+
+                        </div>
+
+                        <div class="field">
+
+                            <label for="address" class="label">Address</label>
+                            <div class="control">
+                                <input required type="text" placeholder='Number and street name' id='address' autocomplete="nope" class="input">
+                            </div>
+
+                        </div>
+
+                        <div class="field">
+
+                            <div class="control">
+                                <input type="text" autocomplete="nope" placeholder='Second address (optional)' class="input">
+                            </div>
+
+                        </div>
+
+                        <div class="field mt-1">
+                            <div class="buttons">
+
+                                <button class="button is-success">Create</button>
+                                <button class="button is-light">Cancel</button>
+
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </section>
+
+    </body>
+
+</html>
