@@ -8,6 +8,8 @@
 
             <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css"> -->
             <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/united/bulmaswatch.min.css">
+
+
         </head>
 
     <body><!-- The rest of your code will go here -->
@@ -185,151 +187,10 @@
 
                     </nav>
 
-                    <div class="columns is-multiline">
+                    <div id='app' class="columns is-multiline">
 
-                        <!-- Let's iterate using Vue -->
-                        <div class="column is-12-tablet is-6-desktop is-4-widescreen">
+                        <!--
 
-                            <article class="box">
-                                <div class="media">
-                                    <aside class="media-left">
-                                        <img src="img/py.jpg" width='80' alt="Python Book">
-                                    </aside>
-
-                                    <div class="media-content">
-                                        <p class="title is-5 is-spaced is-marginless">
-                                            <a href="edit-book.html">Python Crash Course</a>
-                                        </p>
-
-                                        <p class="subtitle is-marginless">
-                                            $6.69
-                                        </p>
-
-                                        <div class="content is-small">
-
-                                            270 pages.
-                                            <br>
-                                            A Hands-On, Project-Based Introduction to Programming
-                                            <br>
-                                            <a href="edit-book.html">Edit</a>
-                                            <span>.</span>
-                                            <a href="#">Delete</a>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </article>
-
-                        </div>
-                        <div class="column is-12-tablet is-6-desktop is-4-widescreen">
-
-                            <article class="box">
-                                <div class="media">
-
-                                    <aside class="media-left">
-                                        <img src="img/js.jpg" alt="Javascript Book" width='80'>
-                                    </aside>
-
-                                    <div class="media-content">
-
-                                        <p class="title is-5 is-spaced is-marginless">
-                                            <a href="edit-book.html">
-                                                Eloquent Javascript
-                                            </a>
-                                        </p>
-
-                                        <p class="subtitle is-marginless">
-                                                $ 18,00
-                                        </p>
-
-                                        <div class="content is-small">
-                                            Completely revised and updated, this best-selling introduction
-                                            to programming in JavaScript focuses on writing real applications.
-                                            <br>
-                                            <a href="edit-book.html">Edit</a>
-                                            <span>.</span>
-                                            <a href="#">Delete</a>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </article>
-
-                        </div>
-                        <div class="column is-12-tablet is-6-desktop is-4-widescreen">
-                            <article class="box">
-                                <div class="media">
-                                    <aside class="media-left">
-                                        <img src="img/css.jpg" alt="Css" width='80' >
-                                    </aside>
-
-                                    <div class="media-content">
-
-                                        <div class="title is-5 is-marginless is-spaced">
-                                            <a href="see-book.html">
-                                                CSS, The Definitive Guide
-                                            </a>
-                                        </div>
-
-                                        <div class="subtitle is-marginless">
-                                            $ 48.88
-                                        </div>
-
-                                        <div class="content is-small">
-                                            If you’re a web designer or app developer interested in sophisticated page styling,
-                                            improved accessibility, and saving time and effort, this book is for you.
-                                            <br>
-
-                                            <a href="edit-book.html">Edit</a>
-                                            <span>.</span>
-                                            <a href="#">Delete</a>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="column is-12-tablet is-6-desktop is-4-widescreen">
-                            <article class="box">
-                                <div class="media">
-                                    <aside class="media-left">
-                                        <img src="img/bulma.jpg" alt="Css" width='80' >
-                                    </aside>
-
-                                    <div class="media-content">
-
-                                        <div class="title is-5 is-marginless is-spaced">
-                                            <a href="see-book.html">
-                                                Creating interfaces with Bulma
-                                            </a>
-                                        </div>
-
-                                        <div class="subtitle is-marginless">
-                                            $ 48.88
-                                        </div>
-
-                                        <div class="content is-small">
-                                            • Create layouts with Bulma <br>
-                                            • Work with components in Bulma <br>
-                                            • Design specific elements for your UI <br>
-                                            • Extend components with your own setup <br>
-                                            • Learn to integrati Bulma with JavaScript through the following frameworks: React, Angular, VueJS, and Vanilla JS.
-                                            <br>
-
-                                            <a href="edit-book.html">Edit</a>
-                                            <span>.</span>
-                                            <a href="#">Delete</a>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
                         <div class="column is-12-tablet is-6-desktop is-4-widescreen">
                             <article class="box">
                                 <div class="media">
@@ -397,6 +258,54 @@
                                 </div>
                             </article>
                         </div>
+                    -->
+                            <!-- Let's iterate using Vue -->
+                            <div  v-for='book in books'  class="column is-12-tablet is-6-desktop is-4-widescreen" >
+
+                                <article class="box">
+                                    <div class="media">
+                                        <aside class="media-left">
+                                            <img :src="book.imgSrc" width='80' :alt='book.imgDescription' >
+                                        </aside>
+
+                                        <div class="media-content">
+                                            <p class="title is-5 is-spaced is-marginless">
+                                                <a href="edit-book.html">
+                                                    {{ book.title }}
+                                                </a>
+                                            </p>
+
+                                            <p class="subtitle is-marginless">
+                                                {{ book.price }}
+                                            </p>
+
+                                            <div class="content is-small">
+
+                                                {{ book.length }}
+                                                <br>
+                                                {{ book.description }}
+                                                <br>
+
+                                                <div v-if="book.detailsList.length > 0">
+                                                    <div v-for='(detail,index) in book.detailsList'>
+                                                        {{ detail }} <br>
+                                                    </div>
+                                                </div>
+
+                                                <a href="edit-book.html">Edit</a>
+                                                <span>.</span>
+                                                <a href="#">Delete</a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </article>
+
+                            </div>
+
+
                     </div>
 
                     <nav class="pagination">
@@ -435,7 +344,12 @@
             </div>
 
         </section>
+                    <!-- development version, includes helpful console warnings -->
+            <!-- Attaching VUE -->
+            <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
+        <!-- Vue Instance -->
+        <script src="vue/books.js"></script>
     </body>
 
 </html>
