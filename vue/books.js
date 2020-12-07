@@ -51,6 +51,17 @@ var app = new Vue({
             length: '376',
             imgSrc: "img/analyst.jpg",
             detailsList:[]
+          },
+          {
+              ig:6,
+              title: 'Jaque al Psicoanalista',
+              price: '$2.99',
+              imgDescription: "John Katzenbach's book",
+              description: 'Te la debo',
+              length:'desconocido',
+              imgSrc: "img/jaque.jpg",
+              detailsList:[]
+
           }
       ]
     }
