@@ -1,0 +1,12 @@
+[
+    {
+          "id": 1,
+          "title": "Python Crash Course with Vue",
+          "price": 6.69,
+          "imgDescription": "Python Book",
+          "length": 270,
+          "description": "A Hands-On, Project-Based Introduction to Programming",
+          "imgSrc": "img/js.jpg",
+          "detailsList": []
+    }
+]
