@@ -1,5 +1,6 @@
+/* ###### VUE INSTANCE ##### */
 var app = new Vue({
-
+    /* Options object */
     el: '#books',
     data: {
       message: 'Hello Vue!',
