@@ -46,7 +46,7 @@ var app = new Vue({
           imgDescription: 'Bulma Book',
           length: 779,
           imgSrc: "img/bulma.jpg",
-          detailsList: ['• Create layouts with Bulma','• Work with components in Bulma','• Design specific elements for your UI', '• Extend components with your own setup', 'Learn to integrati Bulma with JavaScript through the following frameworks: React, Angular, VueJS, and Vanilla JS.']
+          detailsList: ['• Create layouts with Bulma','• Work with components in Bulma','• Design specific elements for your UI', '• Extend components with your own setup']
         },
         /* Libro 5 */
         {
@@ -114,7 +114,7 @@ var app = new Vue({
           imgDescription: 'Bulma Book',
           length: 779,
           imgSrc: "img/bulma.jpg",
-          detailsList: ['• Create layouts with Bulma','• Work with components in Bulma','• Design specific elements for your UI', '• Extend components with your own setup', 'Learn to integrati Bulma with JavaScript through the following frameworks: React, Angular, VueJS, and Vanilla JS.']
+          detailsList: ['• Create layouts with Bulma','• Work with components in Bulma','• Design specific elements for your UI', '• Extend components with your own setup']
         },
         /* Libro 5 */
         {
@@ -269,6 +269,12 @@ var app = new Vue({
                 console.log(this.books[i].title);
           }
 
+
+        },
+
+        hello:function(){
+
+          alert('hello');
 
         }
 

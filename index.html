@@ -8,6 +8,9 @@
 
             <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css"> -->
             <link rel="stylesheet" href="https://jenil.github.io/bulmaswatch/lux/bulmaswatch.min.css">
+            <link rel="stylesheet" href="css/index.css">
+
+            <script src="https://unpkg.com/vue@next"></script>
 
 
         </head>
@@ -81,7 +84,7 @@
 
         <!-- We are done with the navbar; now we are going with the general SECTION -->
         <section class="section">
-            <!-- Grid system -->
+            <!-- Grid system  and Vue Instance #books -->
             <div id='books' class="columns">
 
                 <!-- Actual content; specific to each page -->
@@ -135,11 +138,10 @@
                     </nav>
 
                     <div class="columns is-multiline">
-
-                            <!-- Let's iterate using Vue -->
+                            <!-- Let's iterate using Vue 3-->
                             <div  v-for='book in books'  class="column is-12-tablet is-6-desktop is-4-widescreen" ><!-- Responsiveness -->
 
-                                <article class="box">
+                                <article id='artPiece' @click='hello' class="box">
                                     <div class="media">
                                         <aside class="media-left">
                                                 <img class='image is-rounded' :src="book.imgSrc" style='max-width:120px' :alt='book.imgDescription' >
@@ -150,6 +152,7 @@
                                             <p class="title is-5 is-spaced is-marginless">
                                                 <a href="edit-book.html">
                                                     {{ book.title }}
+
                                                 </a>
                                             </p>
 
@@ -182,8 +185,6 @@
                                 </article>
 
                             </div>
-
-
                     </div>
 
                 </div>
@@ -192,13 +193,16 @@
         </section>
         <!-- development version, includes helpful console warnings -->
         <!-- Attaching VUE -->
-        <script  src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+       <!--  <script  src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
 
-        <!-- Vue Instance -->
-        <script src="vue/books.js" type="module"></script>
+        <!-- Vue Instance; in Vue 2 -->
+       <!--  <script src="vue/books.js" type="module"></script> -->
         <!-- Vue Buscador Instance -->
         <!-- <script src="vue/buscador.js" type="module"></script>
- -->
+
+        <!-- Vue 3 code -->
+        <script src="vue/books3.js" type="module"></script>
+
 
     </body>
 
