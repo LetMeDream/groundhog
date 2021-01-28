@@ -17,71 +17,6 @@
 
     <body><!-- The rest of your code will go here -->
 
-        <!-- Oops!, we are now logged. We should be having a navigation bar of some sort. -->
-        <nav class="navbar has-shadow">
-
-            <!-- Navbar are composed of 2 parts; 'navbar-brand y navbar-menu' -->
-            <div class="navbar-brand">                                      <!-- The  navbar-brand  lives  on  the  left  side  of  the  navbar. -->
-                <img src="img/marmota.jpg" alt="Logoxd" style='width:240px'>    <!-- It’s  always  visible  and  can  contain  any  number  of  navbar-item(s). -->
-                                                                            <!-- It  also  holds  the  Bulma  navbar-burger,  which  isused to toggle the navbar-menu -->
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-
-            </div>
-
-            <!-- Then the second part; navbar-menu -->
-            <div class="navbar-menu">
-                <div class="navbar-start">
-                    <div class="navbar-item">
-                        <small class='m-3'>Publishing at the speed of technology</small>
-                    </div>
-                </div>
-
-                <div class="navbar-end">
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <div class="navbar-link">User's Name</div>
-                        <div class="navbar-dropdown">
-                            <!-- Content to be dropped -->
-                            <div class="navbar-item">
-                                <div>
-
-                                    <span class="icon is-small">
-                                        <i class="fa fa-user-circle-o"></i>
-                                    </span>
-                                    Profile
-
-                                </div>
-                            </div>
-                            <!-- Another item; for bug reporting -->
-                            <div class="navbar-item">
-
-                                <span class="icon is-small">
-                                    <i class="fa fa-bug"></i>
-                                </span>
-                                Report bug
-
-                            </div>
-                            <!-- This item for logging out -->
-                            <div class="navbar-item">
-
-                                <span class="icon is-small">
-                                    <i class="fa fa-sign-out"></i>
-                                </span>
-                                Sign Out
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </nav>
-
         <!-- We are done with the navbar; now we are going with the general SECTION -->
         <section class="section">
             <!-- Grid system  and Vue Instance #books -->
@@ -141,16 +76,16 @@
                             <!-- Let's iterate using Vue 3-->
                             <div  v-for='book in books'  class="column is-12-tablet is-6-desktop is-4-widescreen" ><!-- Responsiveness -->
 
-                                <article id='artPiece' @click='hello' class="box">
+                                <article  id='artPiece' class="box">
                                     <div class="media">
                                         <aside class="media-left">
-                                                <img class='image is-rounded' :src="book.imgSrc" style='max-width:120px' :alt='book.imgDescription' >
+                                                <img id='imgOfMine' class='image is-rounded'  :src="book.imgSrc" :alt='book.imgDescription' >
 
                                         </aside>
 
                                         <div class="media-content">
-                                            <p class="title is-5 is-spaced is-marginless">
-                                                <a href="edit-book.html">
+                                            <p @hover='color' class="is-5 is-spaced is-marginless">
+                                                <a class='title' id='colorMe'  href="edit-book.html">
                                                     {{ book.title }}
 
                                                 </a>

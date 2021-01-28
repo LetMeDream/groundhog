@@ -1,77 +1,9 @@
 const Books = {
     data() {
         return {
-            counter: 1,
+            counter: 0,
             message: 'Hello Vue!',
             unorderBooks: [
-              /* Libro 1 */
-              {
-                    id: 1,
-                    title: 'Python Crash Course with Vue',
-                    price: 6.69,
-                    imgDescription: 'Python Book',
-                    length: 270,
-                    description: 'A Hands-On, Project-Based Introduction to Programming',
-                    imgSrc: "img/js.jpg",
-                    detailsList: []
-              },
-              /* Libro 2 */
-              {
-                id:2,
-                title: 'Eloquent Javascript',
-                price: 18.00,
-                imgDescription: 'Javascript Book',
-                length: 444,
-                description: "Completely revised and updated, this best-selling introduction to programming in JavaScript focuses on writing real applications.",
-                imgSrc: "img/py.jpg",
-                detailsList: []
-              },
-              /* Libro 3 */
-              {
-                id:3,
-                title: 'CSS, The Definitive Guide',
-                price: 48.88,
-                imgDescription: 'CSS',
-                length: 667,
-                description: "If you’re a web designer or app developer interested in sophisticated page styling, improved accessibility, and saving time and effort, this book is for you.",
-                imgSrc: "img/css.jpg",
-                detailsList: []
-              },
-              /* Libro 4 */
-              {
-                id:4,
-                title: 'Creating Interfaces with Bulma',
-                price: 6.66,
-                imgDescription: 'Bulma Book',
-                length: 779,
-                imgSrc: "img/bulma.jpg",
-                detailsList: ['• Create layouts with Bulma','• Work with components in Bulma','• Design specific elements for your UI', '• Extend components with your own setup']
-              },
-              /* Libro 5 */
-              {
-                id:5,
-                title: 'The Analyst',
-                price: 2.50,
-                imgDescription: 'The analyst Book',
-                description:'El thriller psicológico es la novela más exitosa del autor y en 2003 se publicó en español en España, Chile, Argentina, Colombia, Venezuela, México, Uruguay y Ecuador, donde se mantuvo entre los más vendidos.',
-                length: 376,
-                imgSrc: "img/analyst.jpg",
-                detailsList:[]
-              },
-              /* Libro 6 */
-              {
-                  ig:6,
-                  title: 'Jaque al Psicoanalista',
-                  price: 2.99,
-                  imgDescription: "John Katzenbach's book",
-                  description: 'Te la debo',
-                  length:111,
-                  imgSrc: "img/jaque.jpg",
-                  detailsList:[]
-
-              }
-            ],
-            books: [
               /* Libro 1 */
               {
                     id: 1,
@@ -139,12 +71,58 @@ const Books = {
 
               }
             ]
+,
+            books: [
+              /* Libro 1 */
+              {
+                    id: 1,
+                    title: 'Python Crash Course with Vue',
+                    price: 6.69,
+                    imgDescription: 'Python Book',
+                    length: 270,
+                    description: 'A Hands-On, Project-Based Introduction to Programming',
+                    imgSrc: "img/marmota.jpg",
+                    detailsList: []
+              },
+              /* Libro 2 */
+              {
+                id:2,
+                title: 'Eloquent Javascript',
+                price: 18.00,
+                imgDescription: 'Javascript Book',
+                length: 444,
+                description: "Completely revised and updated, this best-selling introduction to programming in JavaScript focuses on writing real applications.",
+                imgSrc: "img/py.jpg",
+                detailsList: []
+              },
+              /* Libro 3 */
+              {
+                id:3,
+                title: 'CSS, The Definitive Guide',
+                price: 48.88,
+                imgDescription: 'CSS',
+                length: 667,
+                description: "If you’re a web designer or app developer interested in sophisticated page styling, improved accessibility, and saving time and effort, this book is for you.",
+                imgSrc: "img/marmota2.jpg",
+                detailsList: []
+              }
+            ]
         }
     },
     methods:{
-        hello(){
-            alert('nice in vue 3');
-        },
+        /* helloagain(){
+          setTimeout(() => {
+
+            if(this.counter==2){
+
+              setTimeout(() => {
+                this.counter = 0;
+              }, 2000);
+            }
+
+          }, 1000);
+        }, */
+
         filterByName(){
             let booksFiltrados = [];
             let cache='x';
@@ -261,6 +239,11 @@ const Books = {
                 booksByPageCount.sort((a,b)=> a.length - b.length);
                 this.books = booksByPageCount;
             }
+
+        },
+        color(){
+
+          alert('fuck you');
 
         }
     }

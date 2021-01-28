@@ -1,3 +1,78 @@
+/* Pics/Images  on media-left*/
 .media .media-left .image{
-    clip-path: circle(50%);
+    max-width:120px;
+    transition: all 2s;
+    transition-delay: 25ms;
+
 }
+
+.box{
+    min-height: 220px;
+}
+#books{
+    min-height: calc( 100vh - 84px );
+}
+
+
+/* First CSS Effect */
+/* Selecting first .article */
+div.is-12-tablet:nth-child(1) > article:nth-child(1){
+
+    overflow: hidden;
+
+    position:relative;
+    transition: all .4s;
+    transition-timing-function: ease-out;
+    box-shadow: 0 0 0 1px #b5bbbf;
+    background: linear-gradient(transparent);
+}
+div.is-12-tablet:nth-child(1) > article:nth-child(1):hover{
+
+    transform:translateY(-6px);
+    background-color:rgba(0, 0, 255,.1);
+    cursor:pointer;
+    box-shadow: 0 0 0 1px #b5bbbf;
+
+}
+/* Texts */
+div.is-12-tablet:nth-child(1) > article:nth-child(1):hover .content,
+div.is-12-tablet:nth-child(1) > article:nth-child(1):hover .subtitle,
+div.is-12-tablet:nth-child(1) > article:nth-child(1):hover .title{
+    transform:translateY(140px);
+    opacity: 0;
+    transition: all .4s;
+}
+/* Img */
+
+
+
+/*  **************************************************************************************************************************************************************
+    Linear gradient are NOT animatable, however old maty Dave Lunny came up with a functional and easy solution using CSS only, using the magical :before bullshit
+    of which I really should be more aware of
+    **************************************************************************************************************************************************************
+*/
+div.is-12-tablet:nth-child(1) > article:nth-child(1):before{
+
+    border-radius: inherit;
+    background: radial-gradient(circle, white 0%, rgba(74, 74, 74,.2) 100%);
+    content: '';
+    display:block;
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0; left:0;
+    opacity: 0;
+    z-index:-100;
+
+
+    transition:opacity .4s;
+    transition-timing-function: ease-out;
+
+}
+/* Then we make it appear, and now you got 'animatables background gradients' */
+div.is-12-tablet:nth-child(1) > article:nth-child(1):hover:before{
+    opacity: 1;
+}
+
+
+
